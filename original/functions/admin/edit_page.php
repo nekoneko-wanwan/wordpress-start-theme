@@ -3,11 +3,11 @@
 /*****************************************
  * 管理画面の固定ページを修正する
  *****************************************/
-function custom_admin_page() {
+function edit_admin_page() {
   global $original_config;
   global $wp_post_types;
 
-  /* Custom label */
+  /* edit label */
   $labels = $wp_post_types['page']->labels;
   $labels->name = $original_config['pageLabel'];
   $labels->singular_name = $original_config['pageLabel'];
@@ -43,4 +43,4 @@ function custom_admin_page() {
 }
 
 /* 実行 */
-add_action('init', 'custom_admin_page');
+add_action('init', 'edit_admin_page');

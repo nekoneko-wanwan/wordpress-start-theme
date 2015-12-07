@@ -17,13 +17,13 @@ require_once locate_template('functions/admin/remove_sidemenu.php');
 require_once locate_template('functions/admin/remove_dashboard.php');
 
 /* Admin custom functions */
-require_once locate_template('functions/admin/custom_common_parts.php');
-require_once locate_template('functions/admin/custom_sidemenu.php');
-require_once locate_template('functions/admin/custom_post.php');
-require_once locate_template('functions/admin/custom_page.php');
+require_once locate_template('functions/admin/edit_common_parts.php');
+require_once locate_template('functions/admin/edit_sidemenu.php');
+require_once locate_template('functions/admin/edit_post.php');
+require_once locate_template('functions/admin/edit_page.php');
 
 
 /* front */
 require_once locate_template('functions/front/remove_default_code.php');
-require_once locate_template('functions/front/custom_post.php');
+require_once locate_template('functions/front/edit_post.php');
 

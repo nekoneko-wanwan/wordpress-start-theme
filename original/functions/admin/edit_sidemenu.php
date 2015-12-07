@@ -4,7 +4,7 @@
  * 管理画面の左メニュー名を修正する
  * あくまでラベルだけなので、詳細ページはそのまま
  *****************************************/
-function custom_admin_sidemenu() {
+function edit_admin_sidemenu() {
   global $original_config;
 
   /* all users ---------- */
@@ -64,4 +64,4 @@ function custom_admin_sidemenu() {
 }
 
 /* 実行 */
-add_action('admin_menu', 'custom_admin_sidemenu', 100);
+add_action('admin_menu', 'edit_admin_sidemenu', 100);

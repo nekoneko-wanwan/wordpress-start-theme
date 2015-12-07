@@ -3,7 +3,7 @@
 /*****************************************
  * 表側ページの投稿やアーカイブの表示条件を設定する
  *****************************************/
- function custom_front_posts($query) {
+ function edit_front_posts($query) {
   global $original_config;
 
   /* 管理画面、メインクエリに干渉しないために必須 */
@@ -24,4 +24,4 @@
 }
 
 /* 実行 */
-add_action('pre_get_posts', 'custom_front_posts');
+add_action('pre_get_posts', 'edit_front_posts');

@@ -3,11 +3,11 @@
 /*****************************************
  * 管理画面のpostを修正する
  *****************************************/
-function custom_admin_post() {
+function edit_admin_post() {
   global $original_config;
   global $wp_post_types;
 
-  /* Custom label */
+  /* edit label */
   $labels = $wp_post_types['post']->labels;
   $labels->name = $original_config['postLabel'];
   $labels->singular_name = $original_config['postLabel'];
@@ -50,4 +50,4 @@ function custom_admin_post() {
 }
 
 /* 実行 */
-add_action('init', 'custom_admin_post');
+add_action('init', 'edit_admin_post');
