@@ -28,7 +28,6 @@ function edit_admin_page() {
     unset($columns['date']);
     return $columns;
   }
-  add_filter('manage_pages_columns', 'remove_admin_pages_columns');
 
   /* Remove metaBox  */
   function remove_admin_pages_metaboxes() {
@@ -39,6 +38,13 @@ function edit_admin_page() {
     remove_meta_box('slugdiv', 'page', 'normal');          // スラッグ
     remove_meta_box('authordiv', 'page', 'normal');        // 作成者
   }
+
+  // 管理者の場合は削除しないで離脱する
+  if(current_user_can('administrator')) {
+    return;
+  }
+
+  add_filter('manage_pages_columns', 'remove_admin_pages_columns');
   add_action('admin_menu', 'remove_admin_pages_metaboxes');
 }
 
